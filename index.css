@@ -265,14 +265,14 @@
         /* --- Flights Search Block --- */
         .flights-block {
             position: relative;
-            width: 900px;
-            margin: -60px auto 0 auto;
+           /* width: 900px; */
+            left: 200px;
+            /* margin: -60px auto 0 auto; */
             background: transparent;
             z-index: 5;
         }
             .flights-block .flights-search-form {
-                margin-left: auto;
-                margin-right: auto;
+                right: 200px;
             }
         .flights-tabs {
             display: flex;
@@ -331,7 +331,9 @@
 }
         .flights-search-form {
             display: flex;
-            align-items: center;
+            justify-content: center;
+            /* isplay: flex;
+            left: 200px;
             gap: 18px;
             background: #ffffff;
             border-radius: 18px;
@@ -339,7 +341,7 @@
             padding: 18px 24px;
             margin-bottom: 18px;
             margin-top: 0;
-            flex-wrap: wrap;
+            flex-wrap: wrap; */
             z-index: 1;
         }
         .search-field {
@@ -433,8 +435,8 @@
             gap: 8px;
             font-family: 'Manrope', Arial, sans-serif;
             position: relative;
-            left: -500px;
-            top: 80px;
+            right: 630px;
+            top: 60px;
         }
         .search-btn:hover {
             background: #e13b3b;
