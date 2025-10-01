@@ -1,3 +1,14 @@
+.flight-tab.round-trip {
+    background: #fff;
+    color: #ff6848;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 4px 24px #ffb34722;
+}
+.flight-tab.round-trip:hover {
+    background: #fff;
+    color: #ff6848;
+}
      body {
             margin: 0;
             padding: 0;
@@ -170,16 +181,17 @@
             letter-spacing: -0.02em;
             color: #1F2937;
             margin: 0;
+            top: -100px;
             position: relative;
             vertical-align: middle;
             z-index: 2;
         }
         .main-banner-underline {
             position: relative;
-            left: 210px;
-            top: -25px;
+            left: 220px;
+            top: -130px;
             width: 420px;
-            height: 24px;
+            height: 25px;
             pointer-events: none;
             z-index: 1
         }
@@ -189,12 +201,10 @@
             object-fit: contain;
             display: block;
         }
-
-        /* --- Side Text --- */
         .main-banner-side-text-block {
-            position: absolute;
+            position: relative;
             top: 160px;
-            left: 800px;
+            left: 100px;
             width: 528px;
             height: 84px;
             opacity: 1;
@@ -211,9 +221,12 @@
             font-size: 18px;
             line-height: 28px;
             letter-spacing: 0;
+            top: -240px;
+            left: 1150px;
             color: #1F2937;
             vertical-align: middle;
             background: none;
+            position: relative;
         }
         .main-banner-rating {
             display: flex;
@@ -223,11 +236,17 @@
         }
         .main-banner-avatars {
             height: 32px;
+            top: -230px;
+            left: 1150px;
+            position: relative;
         }
         .main-banner-rating-text {
             font-family: 'Manrope', Arial, sans-serif;
             font-weight: 700;
             font-size: 18px;
+            left: 1150px;
+            top: -230px;
+            position: relative;
             color: #1F2937;
         }
         .main-banner-rating-text .star {
@@ -248,9 +267,13 @@
             position: relative;
             width: 900px;
             margin: -60px auto 0 auto;
-            background: none;
+            background: transparent;
             z-index: 5;
         }
+            .flights-block .flights-search-form {
+                margin-left: auto;
+                margin-right: auto;
+            }
         .flights-tabs {
             display: flex;
             justify-content: center;
@@ -258,31 +281,59 @@
             gap: 0;
             margin-bottom: -8px;
         }
-        .flights-tab {
-            background: #ff6848;
-            color: #fff;
-            border: none;
-            border-radius: 18px 18px 0 0;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 16px 48px;
-            cursor: pointer;
-            margin-right: 2px;
-            transition: background 0.2s, color 0.2s;
-            font-family: 'Manrope', Arial, sans-serif;
-        }
-        .flights-tab.active {
-            background: #fff;
-            color: #ff6848;
-            border: 2px solid #ff6848;
-            border-bottom: none;
-            z-index: 2;
-        }
+        /* Новый современный блок табов */
+        .flight-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  margin-bottom: 24px;
+  position: relative;
+  background: transparent;
+}
+
+.flight-tab {
+    position: relative;
+    background: #ff6848;
+    color: #fff;
+    border: none;
+    border-radius: 32px 32px 0 0 / 60px 60px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 48px 18px 48px;
+    cursor: pointer;
+    margin: 0 -8px;
+    z-index: 1;
+    box-shadow: 0 2px 8px #ffb34722;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Manrope', Arial, sans-serif;
+    line-height: 1;
+}
+
+.flight-tab.active {
+    background: #ff6848;
+    color: #fff;
+    z-index: 2;
+    box-shadow: 0 4px 24px #ffb34722;
+}
+
+.flight-tab:hover {
+    background: #ff8c5a;
+    color: #fff;
+}
+
+.flight-tab:first-child {
+  margin-left: 0;
+}
+
+.flight-tab:last-child {
+  margin-right: 0;
+}
         .flights-search-form {
             display: flex;
             align-items: center;
             gap: 18px;
-            background: #fff;
+            background: #ffffff;
             border-radius: 18px;
             box-shadow: 0 4px 24px #ffb34722;
             padding: 18px 24px;
@@ -296,9 +347,10 @@
             flex-direction: column;
             gap: 4px;
             min-width: 140px;
-        }
+            }
         .search-label {
             font-size: 0.75rem;
+            position: relative;
             color: #ff6848;
             font-weight: 700;
             letter-spacing: 1px;
@@ -380,6 +432,9 @@
             align-items: center;
             gap: 8px;
             font-family: 'Manrope', Arial, sans-serif;
+            position: relative;
+            left: -500px;
+            top: 80px;
         }
         .search-btn:hover {
             background: #e13b3b;
@@ -397,7 +452,7 @@
             text-align: center;
         }
         .tours-title {
-            font-size: 2rem;
+            font-size: 2.4rem;
             font-weight: 700;
             color: #232233;
             margin-bottom: 12px;
